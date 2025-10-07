@@ -122,6 +122,10 @@
   .header__auth {
     font-size: var(--fs-sm);
   }
+
+  .menu .menu__list {
+    right: 6%;
+  }
 }
 
 @media screen and (min-width: 769px) {
