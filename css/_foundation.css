@@ -1,0 +1,86 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* ------------------- */
+  /* A. WARNA (COLORS)   */
+  /* ------------------- */
+  --clr-primary: #1da599;
+  --clr-secondary: #ffc265;
+  --clr-heading: #4a4a4a;
+  --clr-desc: #454545;
+  --clr-surface: #f3fffe;
+  --clr-text: #ffffff;
+  --clr-badge: #c1fffa;
+
+  /* ---------------------- */
+  /* B. TIPOGRAFI (TYPOGRAPHY) */
+  /* ---------------------- */
+
+  /* Font Family */
+  --ff-primary: "Nunito", sans-serif;
+  --ff-secondary: "Kufam", sans-serif;
+
+  /* Font Weight */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Font Size */
+  --fs-xsm: 1.2rem;
+  --fs-sm: 1.4rem;
+  --fs-md: 1.6rem;
+  --fs-base: 2rem;
+  --fs-lg: 2.4rem;
+  --fs-xl: 5.4rem;
+}
+
+/* ============================================= */
+/* BREAKPOINT TABLET                         */
+/* ============================================= */
+@media screen and (max-width: 768px) {
+  :root {
+    /* Ukuran di sini adalah ~80% dari versi desktop */
+    --fs-xsm: 1.1rem;
+    --fs-sm: 1.3rem;
+    --fs-md: 1.4rem;
+    --fs-base: 1.8rem;
+    --fs-lg: 2.1rem;
+    --fs-xl: 4.2rem;
+  }
+}
+
+/* ============================================= */
+/* BREAKPOINT MOBILE                         */
+/* ============================================= */
+@media screen and (max-width: 576px) {
+  :root {
+    /* Ukuran di sini adalah ~70% dari versi desktop */
+    --fs-xsm: 1rem;
+    --fs-sm: 1.2rem;
+    --fs-md: 1.4rem; /* Tetap sama dengan tablet agar tidak terlalu kecil */
+    --fs-base: 1.6rem;
+    --fs-lg: 2rem;
+    --fs-xl: 3.2rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--fs-base);
+  font-family: var(--ff-primary);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,29 @@
+/* Aturan untuk Mobile */
+.header {
+  margin-top: 2rem;
+}
+
+.menu__list,
+.header__auth {
+  display: none;
+}
+
+.features {
+  margin-top: 5.5rem;
+}
+
+@media screen and (min-width: 769px) {
+  .header {
+    margin: 8rem auto 0 auto;
+  }
+
+  .features {
+    margin: 5.5rem auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .header {
+    margin-top: 4rem;
+  }
+}

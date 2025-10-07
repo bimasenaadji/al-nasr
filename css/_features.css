@@ -1,0 +1,212 @@
+/* ============================= */
+/* GAYA DASAR (MOBILE < 576px)   */
+/* ============================= */
+.features {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  row-gap: 10rem;
+  background-color: var(--clr-surface);
+}
+
+.features__hero {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  aspect-ratio: 1/1;
+  row-gap: 1rem;
+  order: -1;
+}
+
+.features__hero-img {
+  grid-column: 2/6;
+  grid-row: 1/-1;
+}
+
+.features__card {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: var(--clr-text);
+  border: solid 1px var(--clr-secondary);
+  border-radius: 1rem;
+  font-size: var(--fs-xsm);
+  width: fit-content;
+  height: fit-content;
+  color: var(--clr-desc);
+}
+
+.features__card-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.features__card-name {
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-semibold);
+  margin-bottom: 0.3rem;
+}
+
+.features__card-avatar {
+  width: 4rem;
+  height: auto;
+  margin-right: 1.4rem;
+}
+.features__card-rate {
+  display: flex;
+  justify-content: space-around;
+}
+
+.features__card.top-right {
+  grid-column: 5/-1;
+  grid-row: 2/3;
+}
+
+.features__card.bottom-right {
+  grid-column: 5/-1;
+  grid-row: 5/6;
+  margin-bottom: 1rem;
+}
+
+.brand-wrapper {
+  grid-column: 1/-1;
+  grid-row: 6/-1;
+  display: grid;
+  place-items: end center;
+}
+
+.features__brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 2.2rem;
+  background-color: var(--clr-text);
+  border-radius: 1rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  gap: 2.3rem;
+  grid-column: 3/-1;
+  grid-row: 6;
+  height: fit-content;
+  width: fit-content;
+}
+
+.features__brand img {
+  width: 7rem;
+  height: auto;
+}
+
+.features__brand-name {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-primary);
+}
+
+.features__desc {
+  order: -2;
+}
+
+.features__desc-heading {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-xl);
+  margin-bottom: 0.8rem;
+  color: var(--clr-desc);
+}
+
+.features__desc-subheading {
+  font-size: var(--fs-lg);
+  color: var(--clr-desc);
+  margin-bottom: 1rem;
+}
+
+.features__list-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.features__lists {
+  color: var(--clr-desc);
+  font-size: var(--fs-lg);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.features__list {
+  list-style: none;
+  display: flex;
+  align-items: start;
+  column-gap: 1rem;
+}
+
+.features__desc-cta {
+  color: var(--clr-desc);
+  border: none;
+  font-weight: var(--fw-semibold);
+  background-color: var(--clr-secondary);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+}
+
+.features__desc-cta.btn-2 {
+  background-color: var(--clr-surface);
+  border: 0.15rem solid var(--clr-secondary);
+}
+
+.features__desc-cta.btn-2:hover {
+  background-color: var(--clr-secondary);
+  color: var(--clr-text);
+  opacity: 1;
+}
+
+.features__desc-cta:hover {
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 577px) {
+  .features__hero-img {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    place-self: center;
+    display: grid;
+    place-content: center;
+  }
+
+  .brand-wrapper {
+    grid-row: 6 / -1;
+    grid-column: 3 / 5;
+    place-self: center;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .features {
+    padding: 8rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, auto);
+    row-gap: 10rem;
+    background-color: var(--clr-surface);
+  }
+
+  .features__hero {
+    order: -2;
+  }
+
+  .features__hero-img {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    place-self: center;
+    display: grid;
+    place-content: center;
+  }
+
+  .brand-wrapper {
+    grid-row: 6 / -1;
+    grid-column: 3 / 5;
+    place-self: center;
+  }
+}

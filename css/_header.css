@@ -1,0 +1,184 @@
+/* ============================= */
+/* GAYA DASAR (MOBILE < 576px)   */
+/* ============================= */
+.header {
+  padding: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__brand {
+  width: 8rem;
+}
+.header__auth {
+  padding: 1.6rem 3.2rem;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-desc);
+  border: none;
+  background-color: var(--clr-secondary);
+  border-radius: 1rem;
+  display: none;
+  cursor: pointer;
+}
+
+.header__auth:hover {
+  opacity: 0.8;
+}
+
+/* Hambuger Menu */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  position: relative;
+  z-index: 99;
+}
+
+.menu .menu__list {
+  display: flex;
+  position: absolute;
+  right: 8%;
+  top: 6%;
+  height: 30vh;
+  width: 50vw;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 1s;
+  background-color: var(--clr-secondary);
+  border-radius: 1rem;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.menu .menu__list.slide {
+  opacity: 0.95;
+  transform: translateY(0);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--clr-secondary);
+  transition: all 0.5s;
+}
+
+.menu-toggle input {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 28px;
+  left: 0;
+  top: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+.menu__item {
+  list-style: none;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: var(--clr-desc);
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: var(--clr-primary);
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: var(--clr-primary);
+  transform: rotate(-45deg) translate(-1px, -0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+@media screen and (min-width: 577px) {
+  .header {
+    padding: 5rem;
+  }
+
+  .header__auth {
+    font-size: var(--fs-sm);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header {
+    padding: 0 8rem 8rem 8rem;
+    align-items: center;
+    color: var(--clr-desc);
+  }
+
+  .header__brand {
+    width: 8rem;
+  }
+
+  .header__auth {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu {
+    flex-grow: 1;
+  }
+  .menu .menu__list {
+    position: static;
+    transform: none;
+    opacity: 1;
+    height: auto;
+    width: 70%;
+    background-color: transparent;
+    box-shadow: none;
+    transition: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .menu__item {
+    list-style: none;
+  }
+
+  .menu__link {
+    text-decoration: none;
+    color: var(--clr-desc);
+  }
+
+  .menu__link:hover {
+    cursor: pointer;
+    color: var(--clr-secondary);
+  }
+
+  /* Hambuger Menu */
+  .menu-toggle {
+    display: none;
+  }
+}

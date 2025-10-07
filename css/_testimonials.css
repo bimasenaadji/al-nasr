@@ -1,0 +1,132 @@
+/* ============================= */
+/* GAYA DASAR (MOBILE < 576px)   */
+/* ============================= */
+.testimonials {
+  padding: 4rem;
+}
+
+.testimonials__heading {
+  font-size: var(--fs-xl);
+  font-family: var(--ff-secondary);
+  color: var(--clr-desc);
+  margin-bottom: 1rem;
+}
+
+.testimonials__subheading {
+  font-size: var(--fs-lg);
+  color: var(--clr-desc);
+  margin-bottom: 3rem;
+}
+
+.testimonials__cards {
+  display: flex;
+  overflow: hidden;
+  column-gap: 3rem;
+  margin: 1.5rem;
+  padding: 1rem;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.testimonials__card {
+  display: flex;
+  column-gap: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 1rem;
+  max-width: 50rem;
+  height: auto;
+  flex-shrink: 0;
+  flex-basis: 100%;
+}
+
+.testimonials__card-header {
+  flex-shrink: 0;
+  flex-basis: 5rem;
+}
+
+.testimonials__track.slide-left {
+  display: flex;
+  gap: 2rem;
+  animation: marquee-left 30s linear infinite;
+}
+.testimonials__track.slide-right {
+  display: flex;
+  gap: 2rem;
+  animation: marquee-right 30s linear infinite;
+}
+
+.testimonials__card-img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.testimonials__card-rating {
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-evenly;
+  padding: 0.7rem;
+  background-color: var(--clr-badge);
+  border-radius: 2rem;
+  color: var(--clr-primary);
+  font-weight: var(--fw-semibold);
+  margin-top: 0.5rem;
+}
+
+.testimonials__card-icon {
+  width: 1.5rem;
+}
+
+.testimonials__card-badge {
+  font-size: var(--fs-sm);
+  color: var(--clr-primary);
+  padding: 0.6rem 1.5rem;
+  background-color: var(--clr-badge);
+  width: fit-content;
+  border-radius: 2rem;
+  font-weight: var(--fw-semibold);
+  margin-bottom: 0.5rem;
+}
+
+.testimonials__card-name {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-lg);
+  color: var(--clr-desc);
+  margin-bottom: 0.5rem;
+}
+
+.testimonials__card-desc {
+  font-size: var(--fs-sm);
+  color: var(--clr-desc);
+}
+
+/* "Storyboard" untuk animasi marquee */
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes marquee-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 577px) {
+}
+@media screen and (min-width: 769px) {
+  .testimonials {
+    padding: 8rem;
+  }
+}
