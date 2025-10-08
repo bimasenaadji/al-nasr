@@ -8,6 +8,7 @@
   grid-template-rows: repeat(2, auto);
   margin: 1rem auto 0 auto;
   row-gap: 10rem;
+  place-items: center;
 }
 
 .hero__content-badge {
